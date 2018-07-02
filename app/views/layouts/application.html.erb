@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="/tops">アプリ紹介</a></li>
+        <li><a href="/blogs">日本酒ブログ</a></li>
+      </ul>
+    </header>
+    <%= yield %>
+    <footer>
+     <p>Toshiki Yoshimizu 2018/7/2</p>
+    </footer>
+
+  </body>
+</html>

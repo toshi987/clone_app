@@ -1,0 +1,86 @@
+li{
+    list-style:none;
+}
+ul{
+    padding:0;
+}
+
+body {
+  /* 画像ファイルの指定 */
+  background-image: url(/assets/sake02.jpg);
+  
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+}
+
+header {
+  width: 100%;
+  background-color: #2c3e50;
+  height: 54px;
+}
+
+header ul {
+  margin: 0 auto;
+  list-style: none;
+}
+
+header ul a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+header li {
+  float: left;
+  width: auto;
+}
+
+header ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.contents li{
+    // background-color:#E0F8F7;
+    // color:#fff;
+    padding:10% 10%;
+    font-size: 2rem;
+    box-sizing: border-box;
+    // border: solid 10px;
+}
+
+footer {
+  width: 100%;
+  background-color:#2c3e50;
+  padding: 20px 0 10px 0;
+  color: white;
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+}
