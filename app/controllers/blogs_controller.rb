@@ -19,7 +19,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     if @blog.save
       # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
-      redirect_to blogs_path, notice: "ブログを作成しました！"
+      redirect_to blogs_path, notice: "つぶやきました！"
     else
       # 入力フォームを再描画します。
       render 'new'
@@ -36,7 +36,7 @@ class BlogsController < ApplicationController
   
   def update
     if @blog.update(blog_params)
-      redirect_to blogs_path, notice: "ブログを編集しました！"
+      redirect_to blogs_path, notice: "つぶやきを編集しました！"
     else
       render 'edit'
     end
@@ -44,7 +44,7 @@ class BlogsController < ApplicationController
   
   def destroy
     @blog.destroy
-    redirect_to blogs_path, notice:"ブログを削除しました！"
+    redirect_to blogs_path, notice:"つぶやきを削除しました！"
   end
   
   def confirm
@@ -56,7 +56,7 @@ class BlogsController < ApplicationController
   # メソッドとして切り出し。privateを指定することで、BlogsControllerクラス内でしか呼び出せない
   private
   def blog_params
-    params.require(:blog).permit(:title, :content)
+    params.require(:blog).permit(:content, :created_at)
   end
   
   def set_blog
